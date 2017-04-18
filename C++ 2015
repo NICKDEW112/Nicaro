@@ -1,0 +1,38 @@
+Property of Nicaro 2015 (C)CopyRights
+Software Programmer/Web developer "Aspire to be the best"
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Arraytableweek11
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[,] Name = new string[5, 3];
+            int[,] Quantity = new int[5, 3];
+            double[,] Unit_price = new double[5, 3];
+
+            for (int S = 0; S < 5; S++)
+            {
+                Console.WriteLine("Enter the Name of the Fruit");
+                Name[S, 0] = Console.ReadLine();
+                Console.WriteLine("Enter the Quantity");
+                Quantity[S, 1] = Convert.ToInt16(Console.ReadLine());
+                Console.WriteLine("Enter the Unit Price Of the Fruit");
+                Unit_price[S, 2] = Convert.ToDouble(Console.ReadLine());
+                Console.Clear();
+                
+
+            }
+            for (int S = 0; S < 5; S++)
+            {
+                Console.WriteLine("Name of Fruit: {0}\tQuantiy: {1}\t\tUnit Price: ${2}", Name[S, 0], Quantity[S, 1], Unit_price[S, 2]);
+            }
+            Console.ReadLine();
+        }
+    }
+}
